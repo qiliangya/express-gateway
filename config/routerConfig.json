@@ -1,0 +1,7 @@
+{
+  "v1": [
+    "/member/:memberId/lottery/count",
+    "/lottery",
+    "/lottery/doc"
+  ]
+}
