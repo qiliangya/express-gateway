@@ -1,9 +1,12 @@
-var Servers = {
-  wxAPI: require('./wxAPI/wx.api'),
-  activityAPI: require('./activityAPI/activity.api')
-}
+let apiVersion = require('../routes/version');
 
 exports.use = function(app) {
-  Servers['wxAPI'](app, '/wx');
-  Servers['activityAPI'](app, '/activity');
+  app.use('/v1', ...apiVersion.v1);
+  // app.use('/v2', apiVersion.v2);
+  // for (var router in apiVersion) {
+  //   // 遍历路由版本
+  //   console.log(apiVersion[router])
+  //   return false;
+  //   app.use('/' + router, apiVersion[router]);
+  // }
 }

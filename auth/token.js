@@ -65,3 +65,6 @@ class Token {
     return false;
   }
 }
+
+//  暴露token
+module.exports = exports = Token
